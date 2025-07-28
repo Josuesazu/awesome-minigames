@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+
+/* Custom styles for canvas wrapper so it centers and is responsive */
+#canvas-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+canvas {
+  border-radius: 6px;
+  background: linear-gradient(180deg, #0f172a 0%, #071028 100%);
+  box-shadow: 0 8px 24px rgba(2,6,23,0.6);
+  max-width: 100%;
+  height: auto;
+}

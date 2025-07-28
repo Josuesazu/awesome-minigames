@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Ping Pong — Vanilla TypeScript</title>
+  </head>
+  <body class="bg-neutral-900 text-white">
+    <div id="app" class="min-h-screen flex items-center justify-center p-6">
+      <main class="w-full max-w-4xl">
+        <div class="text-center mb-4">
+          <h1 class="text-2xl font-semibold">Ping Pong — Vanilla TypeScript</h1>
+          <p class="text-sm text-neutral-400">Left: W / S (or ArrowUp/ArrowDown). Right paddle is AI. Press Space to pause/start.</p>
+        </div>
+
+        <div id="game-container" class="bg-neutral-800 rounded-lg p-4 flex flex-col items-center">
+          <!-- Canvas is inserted by the app -->
+          <div id="canvas-wrapper" class="w-full"></div>
+          <div id="score" class="mt-4 flex justify-center gap-6 text-xl font-mono"></div>
+          <div class="mt-2 text-sm text-neutral-400">Press R to reset scores</div>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
