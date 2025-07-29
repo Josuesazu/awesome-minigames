@@ -182,10 +182,9 @@ export class PingPongGame {
       this.ballVel.y *= -1;
     }
 
-    // Left paddle collision
-    const leftX = 10 + this.paddleWidth / 2;
-    if (this.ballPos.x - this.ballRadius < 10 + this.paddleWidth) {
-      const px = 10;
+  // Left paddle collision
+  const paddleLeft = 10;
+  if (this.ballPos.x - this.ballRadius < paddleLeft + this.paddleWidth) {
       if (this.ballPos.y > this.leftPaddleY && this.ballPos.y < this.leftPaddleY + this.paddleHeight) {
         // reflect with angle based on where it hits the paddle
         const relativeY = (this.ballPos.y - (this.leftPaddleY + this.paddleHeight / 2)) / (this.paddleHeight / 2);
@@ -193,7 +192,7 @@ export class PingPongGame {
         const speed = Math.hypot(this.ballVel.x, this.ballVel.y) * 1.03; // speed up slightly
         this.ballVel.x = Math.abs(speed * Math.cos(bounceAngle));
         this.ballVel.y = speed * Math.sin(bounceAngle);
-        this.ballPos.x = 10 + this.paddleWidth + this.ballRadius; // nudge out
+  this.ballPos.x = paddleLeft + this.paddleWidth + this.ballRadius; // nudge out
       }
     }
 
