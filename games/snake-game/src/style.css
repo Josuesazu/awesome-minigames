@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+
+
+/* Additional minimal styles */
+html, body, #root {
+  height: 100%;
+}
+
+/* Make canvas crisp on high-dpi displays */
+canvas {
+  image-rendering: pixelated;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure the game container can shrink on small screens */
+.game-panel {
+  min-width: 0;
+}

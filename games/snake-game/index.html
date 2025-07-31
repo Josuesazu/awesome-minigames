@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Vanilla TS Snake</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body class="min-h-screen bg-slate-900 text-slate-100 flex items-center justify-center">
+    <div class="w-full max-w-3xl p-6">
+      <div class="bg-slate-800 rounded-lg shadow-lg p-6 grid gap-4 md:grid-cols-3">
+        <div class="md:col-span-2 flex flex-col items-center">
+          <canvas id="game" width="480" height="480" class="rounded bg-black border border-slate-700 w-full max-w-full h-auto" ></canvas>
+        </div>
+
+        <div class="flex flex-col items-stretch gap-3 justify-between min-h-0 min-w-0">
+          <div class="space-y-2">
+            <h1 class="text-2xl font-semibold">Snake Game</h1>
+            <p class="text-sm text-slate-400">Use arrow keys or WASD. Press Space to pause/resume.</p>
+          </div>
+
+          <div class="flex items-center justify-between flex-wrap gap-4">
+            <div>
+              <div class="text-sm text-slate-400">Score</div>
+              <div id="score" class="text-3xl font-mono">0</div>
+            </div>
+            <div>
+              <div class="text-sm text-slate-400">Speed</div>
+              <div id="speed" class="text-xl font-mono">5</div>
+            </div>
+          </div>
+          <div class="flex gap-2 flex-col sm:flex-row">
+            <button id="startBtn" class="w-full sm:flex-1 py-2 px-3 bg-green-500 hover:bg-green-600 rounded text-black font-semibold">Start</button>
+            <button id="pauseBtn" class="w-full sm:flex-1 py-2 px-3 bg-yellow-500 hover:bg-yellow-600 rounded text-black font-semibold">Pause</button>
+            <button id="restartBtn" class="w-full sm:flex-1 py-2 px-3 bg-red-500 hover:bg-red-600 rounded text-black font-semibold">Restart</button>
+          </div>
+
+          <div class="text-xs text-slate-400">
+            Built with plain TypeScript, Vite & Tailwind CSS.
+          </div>
+        </div>
+      </div>
+
+      <footer class="mt-4 text-center text-slate-500 text-xs">
+        Press Enter to start if the game is paused.
+      </footer>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
