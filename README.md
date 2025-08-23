@@ -8,5 +8,6 @@ Collection of mini-games made with JavaScript/TypeScript.
 |------|-------|----------|
 | Ping Pong | Vanilla TypeScript, Vite, Tailwind CSS | [games/ping-pong/](https://github.com/muhammad-fiaz/awesome-minigames/tree/main/games/ping-pong) |
 | Snake Game | TypeScript, Vite, Tailwind CSS | [games/snake-game/](https://github.com/muhammad-fiaz/awesome-minigames/tree/main/games/snake-game) |
+| Space Shooter | TypeScript, Vite, Tailwind CSS | [games/space-shooter/](https://github.com/muhammad-fiaz/awesome-minigames/tree/main/games/space-shooter) |
 
 If you add new games, please update this table with the name, stack and relative path.
