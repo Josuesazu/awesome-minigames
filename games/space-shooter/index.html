@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Space Shooter</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body class="bg-gradient-to-b from-[#071029] to-[#07162a] min-h-screen flex items-center justify-center p-5">
+    <div class="w-full max-w-[1100px]">
+      <div class="flex flex-col md:flex-row gap-6 bg-white/3 rounded-xl p-5 shadow-2xl backdrop-blur-md">
+        <!-- Main canvas area -->
+        <div class="flex-1 flex items-center justify-center p-3 rounded-lg bg-white/4">
+          <canvas id="game" class="game-canvas w-full h-auto max-h-[70vh] rounded-md"></canvas>
+        </div>
+
+        <!-- Sidebar / HUD -->
+        <aside class="md:w-80 w-full flex flex-col gap-4">
+          <div role="status" aria-live="polite" class="flex flex-col gap-3">
+            <div class="flex justify-between items-center bg-white/5 rounded-md p-2 text-sm text-slate-300"><span>Score</span><span id="score" class="font-semibold text-white">0</span></div>
+            <div class="flex justify-between items-center bg-white/5 rounded-md p-2 text-sm text-slate-300"><span>Health</span><span id="health" class="font-semibold text-white">100</span></div>
+            <div class="flex justify-between items-center bg-white/5 rounded-md p-2 text-sm text-slate-300"><span>High Score</span><span id="highscore" class="font-semibold text-white">0</span></div>
+            <div class="flex justify-between items-center bg-white/5 rounded-md p-2 text-sm text-slate-300"><span>Wave</span><span id="wave" class="font-semibold text-white">1</span></div>
+          </div>
+
+          <div class="flex gap-3 mt-auto justify-center md:justify-start">
+            <button id="startBtn" class="px-4 py-2 rounded-lg font-semibold bg-cyan-400 text-slate-900 shadow">Start</button>
+            <button id="pauseBtn" class="px-4 py-2 rounded-lg font-semibold bg-white/5 text-white border border-white/6">Pause</button>
+            <button id="restart" class="px-4 py-2 rounded-lg font-semibold bg-white/5 text-white border border-white/6">Restart</button>
+          </div>
+
+          <div class="hud-instructions text-sm text-slate-300 bg-white/4 p-3 rounded-md">
+            <h4 class="text-white font-semibold mb-1">Rules</h4>
+            <ul class="list-disc ml-4 mb-2">
+              <li>Shoot enemies before they reach you.</li>
+              <li>Each enemy that passes you: -1 Health and -10 Score.</li>
+              <li>Clearing a wave: +10 Score (capped at 100).</li>
+              <li>Physical contact with an enemy is immediate Game Over.</li>
+            </ul>
+            <h4 class="text-white font-semibold mb-1">Controls</h4>
+            <ul class="list-disc ml-4">
+              <li>Move: Arrow Left / Right or A / D</li>
+              <li>Shoot: Space</li>
+              <li>Start / Pause / Restart: Buttons</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <div id="gameOverOverlay" class="game-overlay hidden">
+      <div class="game-overlay-box">
+        <h2>Game Over</h2>
+        <p>Your score: <span id="finalScore">0</span></p>
+        <p>High score: <span id="finalHigh">0</span></p>
+        <button id="overlayRestart" class="btn">Restart</button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

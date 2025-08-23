@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+
+/* Minimal custom rules that Tailwind doesn't cover well for the canvas and DPR handling */
+.canvas-wrap { overflow: hidden; }
+.game-canvas { image-rendering: pixelated; background: transparent; border-radius: 0.5rem; display: block; }
+.game-overlay.hidden { display: none; }
+
+/* Keep a tiny set of helpers for legacy selectors used in HTML */
+.hud-instructions { white-space: normal; }
